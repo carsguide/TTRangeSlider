@@ -154,25 +154,25 @@ static const CGFloat kLabelsFontSize = 12.0f;
     return CGSizeMake(UIViewNoIntrinsicMetric, 65);
 }
 
-
-- (void)tintColorDidChange {
-    CGColorRef color = self.tintColor.CGColor;
-
-    [CATransaction begin];
-    [CATransaction setAnimationDuration:0.5];
-    [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut] ];
-    self.sliderLine.backgroundColor = color;
-    self.leftHandle.backgroundColor = color;
-    self.rightHandle.backgroundColor = color;
-
-    if (self.minLabelColour == nil){
-        self.minLabel.foregroundColor = color;
-    }
-    if (self.maxLabelColour == nil){
-        self.maxLabel.foregroundColor = color;
-    }
-    [CATransaction commit];
-}
+//
+//- (void)tintColorDidChange {
+//    CGColorRef color = self.tintColor.CGColor;
+//
+//    [CATransaction begin];
+//    [CATransaction setAnimationDuration:0.5];
+//    [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut] ];
+//    self.sliderLine.backgroundColor = color;
+//    self.leftHandle.backgroundColor = color;
+//    self.rightHandle.backgroundColor = color;
+//
+//    if (self.minLabelColour == nil){
+//        self.minLabel.foregroundColor = color;
+//    }
+//    if (self.maxLabelColour == nil){
+//        self.maxLabel.foregroundColor = color;
+//    }
+//    [CATransaction commit];
+//}
 
 - (float)getPercentageAlongLineForValue:(float) value {
     if (self.minValue == self.maxValue){
